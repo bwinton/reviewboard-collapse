@@ -1,0 +1,20 @@
+{
+  "name": "Reviewboard Collapser",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "A WebExtension to add a collapse button to files in ReviewBoard requests.",
+  "permissions": ["tabs"],
+
+  "content_scripts": [
+    {"matches": ["https://reviewboard.mozilla.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "reviewboard-collapser@webextensions"
+    }
+  }
+}
