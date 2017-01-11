@@ -1,7 +1,8 @@
 {
   "name": "Reviewboard Collapser",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
+  "author": "Blake Winton (https://bwinton.latte.ca/)",
   "description": "A WebExtension to add a collapse button to files in ReviewBoard requests.",
   "permissions": ["tabs"],
 
