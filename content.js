@@ -4,7 +4,6 @@
 
 
 let observer = new MutationObserver((mutations) => {
-  // observer.disconnect();
   mutations.forEach((mutation) => {
     if (mutation.type === 'childList' &&
         mutation.target.localName === 'div' &&
@@ -35,8 +34,10 @@ let observer = new MutationObserver((mutations) => {
         head.appendChild(collapseButton);
       }
     }
-    observer.observe(document.getElementById('diffs'), {childList: true, subtree: true});
   });
 });
 
-observer.observe(document.getElementById('diffs'), {childList: true, subtree: true});
+let diffsDiv = document.getElementById('diffs');
+if (diffsDiv) {
+  observer.observe(diffsDiv, {childList: true, subtree: true});
+}
